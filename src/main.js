@@ -1,5 +1,5 @@
 function isEven(value) {
-  if (isNaN) {
+  if (isNaN(value)) {
     return false;
   }
 
@@ -7,15 +7,15 @@ function isEven(value) {
 }
 
 function isOdd(value) {
-  if (isNaN) {
+  if (isNaN(value)) {
     return false;
   }
 
   return !isEven(value);
 }
 
-console.log(isEven(13));
-console.log(isOdd(13));
+// console.log(isEven(13));
+// console.log(isOdd(13));
 
 
 function max() {
@@ -33,3 +33,22 @@ function max() {
     return NaN;
   }
 }
+
+function isPrime(value) {
+  if (value < 2) {
+    return false;
+  }
+  if (!Number.isInteger(value)) {
+    return false;
+  }
+
+  for (let i = 2; i <= Math.sqrt(value); i++) {
+    if (value % i === 0) {
+      return false;
+    }
+  }
+ 
+  return true;
+}
+
+// console.log(isPrime(1980199520022023));
