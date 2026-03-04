@@ -1,17 +1,9 @@
 function isEven(value) {
-  if (value % 2 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return value % 2 === 0;
 }
 
 function isOdd(value) {
-  if (value % 2 !== 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return !isEven(value);
 }
 
 console.log(isEven(13));
