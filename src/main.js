@@ -1,8 +1,16 @@
 function isEven(value) {
+  if (isNaN) {
+    return false;
+  }
+
   return value % 2 === 0;
 }
 
 function isOdd(value) {
+  if (isNaN) {
+    return false;
+  }
+
   return !isEven(value);
 }
 
@@ -10,14 +18,18 @@ console.log(isEven(13));
 console.log(isOdd(13));
 
 
-function max3(a, b, c) {
-  if (a > b && a > c) {
-    return a;
-  } else if (b > c) {
-    return b;
+function max() {
+  if (arguments.length > 0) {
+    let value = arguments[0];
+
+    for (let i = 1; i < arguments.length; i++) {
+      if (value < arguments[i]) {
+        value = arguments[i];
+      }
+    }
+
+    return value;
   } else {
-    return c;
+    return NaN;
   }
 }
-
-console.log(max3(15, 3, 5));
